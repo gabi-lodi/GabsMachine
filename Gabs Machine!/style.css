@@ -1,0 +1,150 @@
+
+
+@font-face {
+    font-family: Oliver-Regular;
+    src: url(./Oliver-Regular.otf);
+}
+
+@font-face {
+    font-family: TimesNow;
+    src: url(./TimesNow-BoldItalic.ttf);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #f7e9ed;
+}
+#titulo1{
+    font-family: Oliver-Regular;
+    font-size: 40px;
+    color: #5e5658;
+}
+#titulo {
+    font-family: Oliver-Regular;
+    font-size: 20px;
+    color: #5e5658;
+}
+
+#conversores {
+    font-family: Oliver-Regular;
+    color: #5e5658;
+}
+
+#operacaoNumero{
+    font-family: Oliver-Regular;
+    color: #5e5658;
+}
+
+#button {
+    color: palevioletred;
+    font-family: Oliver-Regular;
+}
+
+.button{
+    font-family: Oliver-Regular;
+    color: palevioletred;
+    align-items: center;
+    background-color: #fcfcfd;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow:
+      rgba(64, 64, 64, 0.2) 0 2px 4px,
+      #ffd8ea 0 -3px 0 inset;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    line-height: 2;
+    padding-left: 16px;
+    padding-right: 16px;    
+    font-size: 18px;
+}
+
+.button:active {
+    box-shadow: #d6d6e7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+#select{
+    color: palevioletred;
+    font-family: Oliver-Regular;
+}
+
+.text {
+    font-family: Oliver-Regular;
+    color: #5e5658;
+}
+
+#select_base {
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    width: 200px;
+    height: 25px;
+    background-color: #5e5658;
+}
+
+#imagem{
+    width: 300px;
+}
+
+input{
+    font-family: Oliver-Regular;   
+    color: palevioletred;
+}
+
+.divFlex{
+    display: flex;
+    justify-content: center;
+    background-color: #bfaeb2;
+    border-radius: 20px;
+}
+
+#div1{
+    padding: 30px;
+}
+
+#div2{
+    padding: 30px;
+}
+
+.inputNumero {
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    font-size: 15px;
+}
+
+.input{
+    width: 150px;
+    height: 30px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    font-size: 15px;
+}
+
+.label {
+    font-family: Oliver-Regular;   
+    color: #5e5658;
+  }
+
+.textresposta{
+    font-family: TimesNow;
+    margin: 20px;
+    color: #5e5658;
+}
+
+.divBox{
+    background-color: #bfaeb2;
+    padding: 10px;
+    width: 400px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.respostaconv{
+    font-family: TimesNow;
+    margin: 1px;
+}

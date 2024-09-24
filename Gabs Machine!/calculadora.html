@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora :></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <a href="./Gab's Machine.html">
+            <button class="button">voltar para o conversor</button>
+        </a>
+    <h3 id="titulo1">↳Calculadora de Sistemas Numérios₊˚⊹♡</h3>
+
+<div class="divBox">
+    <label class="label">Primeiro Número</label>
+    <input type="text" id="iptNumero1" class="inputNumero">
+    <br><br>
+
+    <form id="formOp">
+        <input type="radio" name="operacao" value="+">  <span id="operacaoNumero">soma</span>
+        <input type="radio" name="operacao" value="-">  <span id="operacaoNumero">sub</span>
+        <input type="radio" name="operacao" value="/">  <span id="operacaoNumero">div</span>
+        <input type="radio" name="operacao" value="*">  <span id="operacaoNumero">mult</span>
+        <br><br>
+    </form>
+
+    <label class="label">Segundo Número</label>
+    <input type="text" id="iptNumero2" class="inputNumero">
+    <br><br>
+</div>
+
+<div class="divFlex">
+    <div id="div1">
+        <form id="formBase1">
+            <p class="text">Base do primeiro número:</p>
+            <input type="radio" name="base" value="2" id="iptBinario"> <span id="conversores"> Binario</span>
+            <br>
+            <input type="radio" name="base" value="8" id="iptOctal"> <span id="conversores">Octal</span>
+            <br>
+            <input type="radio" name="base" value="10" id="iptDecimal"> <span id="conversores"> Decimal</span>
+            <br>
+            <input type="radio" name="base" value="16" id="iptHexadecimal"> <span id="conversores"> Hexadecimal</span>
+            <br>
+        </form>
+    </div>
+
+
+        <div id="div2">
+            <form id="formBase2">
+                <p class="text">Base do segundo número:</p>
+                <input type="radio" name="base" value="2" id="iptBinario"> <span id="conversores">Binario</span>
+                <br>
+                <input type="radio" name="base" value="8" id="iptOctal"> <span id="conversores">Octal</span>
+                <br>
+                <input type="radio" name="base" value="10" id="iptDecimal"> <span id="conversores"> Decimal</span>
+                <br>
+                <input type="radio" name="base" value="16" id="iptHexadecimal"> <span id="conversores"> Hexadecimal</span>
+                <br>
+            </form>
+        </div>
+    </div>
+
+    <br><br>
+    <button onclick="calcular()" class="button">Calcular!</button>
+    <br>
+    <div id="divResposta" class="textresposta"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var num1 = iptNumero1.value;
+        var num2 = iptNumero2.value;
+        var op = formOp.operacao.value;
+        var base1 = formBase1.base.value;
+        var base2 = formBase2.base.value;
+
+        if (base1 == '2'){
+            num1 = parseInt(num1, 2)
+
+        } else if (base1 == '8'){
+            num1 = parseInt(num1, 8)
+
+        } else if (base1 == '10'){
+            num1 = parseInt(num1, 10)
+
+        } else if (base1 == '16'){
+            num1 = parseInt(num1, 16)
+        }
+
+        if (base2 == '2'){
+            num2 = parseInt(num2, 2)
+
+        } else if (base2 == '8'){
+            num2 = parseInt(num2, 8)
+            
+        } else if (base2 == '10'){
+            num2 = parseInt(num2, 10)
+            
+        } else if (base2 == '16'){
+            num2 = parseInt(num2, 16)
+        }
+
+        if(op == '+'){
+            var soma = num1 + num2;
+            divResposta.innerHTML = `${num1.toString(base1)} (${num1.toString(10)} na base 10) + ${num2.toString(base2)} (${num2.toString(10)} na base 10) =
+            <br> <b>${soma.toString(2)} na base 2</b>
+            <br> <b>${soma.toString(8)} na base 8</b>
+            <br> <b>${soma} na base 10</b>
+            <br> <b>${soma.toString(16)} na base 16</b>
+            `
+        } else if (op == '-') {
+            var sub = num1 - num2;
+            divResposta.innerHTML = `${num1.toString(base1)} (${num1.toString(10)} na base 10) - ${num2.toString(base2)} (${num2.toString(10)} na base 10) = 
+            <br> <b>${sub.toString(2)} na base 2</b>
+            <br> <b>${sub.toString(8)} na base 8</b>
+            <br> <b>${sub}</b>
+            <br> <b>${sub.toString(16)} na base 16</b>
+            `
+        } else if (op == '/'){
+            var div = num1 / num2;
+            divResposta.innerHTML = `${num1.toString(base1)} (${num1.toString(10)} na base 10) / ${num2.toString(base2)} (${num2.toString(10)} na base 10) = 
+            <br> <b>${div.toString(2)} na base 2</b>
+            <br> <b>${div.toString(8)} na base 8</b>
+            <br> <b>${div} na base 10</b>
+            <br> <b>${div.toString(16)} na base 16</b>
+            `
+        } else if (op = '*'){
+            var mult = num1 * num2;
+            divResposta.innerHTML = `${num1.toString(base1)} (${num1.toString(10)} na base 10) * ${num2.toString(base2)} (${num2.toString(10)} na base 10) = 
+            <br> <b>${mult.toString(2)} na base 2</b>
+            <br> <b>${mult.toString(8)} na base 8</b>
+            <br> <b>${mult} na base 10</b>
+            <br> <b>${mult.toString(16)} na base 16</b>
+            `
+        }
+    }
+</script>

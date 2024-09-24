@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Meow's Machine</title>
+    </head>
+    
+    <body>
+    <div class="divBox">
+        <div class="container">
+            <center>
+                <a href="./calculadora.html">
+                    <button class="button">calculadora :></button>
+                </a>
+        <h1 id="titulo1"> ₊ ⊹Gabs's Machine⋆౨ৎ˚⟡˖ ࣪ </h1>
+
+        <h3 id="titulo">↷Informe um número:</h3>
+
+            <input id="iptNumero" type="text" placeholder="Digite o valor" class="input">
+
+        <h3 class="text">Escolha a base do número:</h3>
+   
+        <form id="formBase">
+            <input type="radio" name="base" value="2" id="iptBinario"> <b id="conversores"> Binario</b>
+            <br>
+            
+            <input type="radio" name="base" value="8" id="iptOctal"> <b id="conversores"> <b id="conversores"> Octal</b>
+            <br>
+
+            <input type="radio" name="base" value="10" id="iptDecimal"> <b id="conversores"> Decimal</b>
+            <br>
+
+            <input type="radio" name="base" value="16" id="iptHexadecimal"> <b id="conversores"> Hexadecimal</b>
+            <br>
+        </form>
+
+        <br><br>
+
+            <button onclick="converter(event)" class="button">Converter ᯓᡣ𐭩</button>
+        <br><br>
+        <div id="divConversao" class="respostaconv"></div>
+        <!--<button onclick="quiz()" id="button">Quiz!</button>-->
+
+    </div>
+</div>
+<script>
+
+    function converter(e) {
+    
+    e.preventDefault()
+
+    var numero = iptNumero.value;
+    var Base = Number(formBase.base.value);
+    var resposta = parseInt(numero, Base);
+
+    console.log(Base)
+
+    divConversao.innerHTML = `
+        binario: ${resposta.toString(2)}
+        <br>
+        octal: ${resposta.toString(8)}
+        <br>
+        decimal: ${resposta.toString(10)}
+        <br>
+        hexadecimal: ${resposta.toString(16)}
+        <br>
+    `
+    /* var base = inputBase.value;
+    var hex_input = parseInt(`${input}`, base);
+    hex_input.toString(8)
+
+    divMensagem.innerHTML = `${hex_input.toString(8)}`
+    divMensagem.innerHTML = `${hex_input}`
+    divMensagem.innerHTML = `${hex_input.toString(2)}`
+    
+    var decimal = Number (demo1.value);
+    */
+}
+
+        </script>
+
+    </body>
+
+</html>
